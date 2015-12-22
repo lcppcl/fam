@@ -1,0 +1,58 @@
+package cn.fam.servive;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import cn.fam.beans.IndPer;
+import cn.fam.beans.VerInfo;
+import cn.fam.daoImp.IndPerDaoImp;
+import cn.fam.daoImp.VerInfoDaoImp;
+import cn.fam.dbutil.DbUtil;
+
+/*
+ * 登录的servlet
+ */
+@WebServlet("/loginServlet")
+public class loginServlet extends HttpServlet {
+
+	public void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		String RegisterName = request.getParameter("name").trim();
+		String Password = request.getParameter("Password").trim();
+		if (RegisterName != null && !RegisterName.equals("")
+				&& Password != null && !Password.equals("")) {
+			IndPerDaoImp inv = new IndPerDaoImp();
+			try {
+				//判断是不是普通用户
+				IndPer indPer = inv.findInvPer(RegisterName, Password);
+				if (indPer != null) {
+					request.setAttribute("indPer", indPer);
+					response.sendRedirect("web/user/welcome.jsp");
+
+				} else {
+					//判断是不是管理员
+					VerInfoDaoImp vii = new VerInfoDaoImp();
+					VerInfo verInfo = vii.findVer(RegisterName, Password);
+					if (verInfo != null) {
+						request.setAttribute("verInfo", verInfo);
+						response.sendRedirect("web/manager/user.jsp");
+					} else {
+						response.sendRedirect("web/login.jsp");
+					}
+				}
+			} catch (Exception ex) {
+				ex.printStackTrace();
+			}
+		} else {
+			response.sendRedirect("web/login.jsp");
+		}
+	}
+}

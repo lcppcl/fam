@@ -1,0 +1,94 @@
+package cn.fam.beans;
+
+import java.util.Date;
+
+/*
+ * 个人申请
+ */
+public class Perapply {
+	private int id;                   //id编号
+	private String lyc;				  //劳模称号
+	private String credit;  		  //荣誉称号
+	private String treatment;		  //享受待遇
+	private String addr;			  //所属市
+	private String culture;			  //文化程度
+	private String politic;			  //政治面貌
+	private String company;			  //工作单位
+	private String function;		  //工作职务
+	private int type;				  //认定状态		  
+	private String eppend;			  //附加信息
+	private Date date;				  //认定时间
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getLyc() {
+		return lyc;
+	}
+	public void setLyc(String lyc) {
+		this.lyc = lyc;
+	}
+	public String getCredit() {
+		return credit;
+	}
+	public void setCredit(String credit) {
+		this.credit = credit;
+	}
+	public String getTreatment() {
+		return treatment;
+	}
+	public void setTreatment(String treatment) {
+		this.treatment = treatment;
+	}
+	public String getAddr() {
+		return addr;
+	}
+	public void setAddr(String addr) {
+		this.addr = addr;
+	}
+	public String getCulture() {
+		return culture;
+	}
+	public void setCulture(String culture) {
+		this.culture = culture;
+	}
+	public String getPolitic() {
+		return politic;
+	}
+	public void setPolitic(String politic) {
+		this.politic = politic;
+	}
+	public String getCompany() {
+		return company;
+	}
+	public void setCompany(String company) {
+		this.company = company;
+	}
+	public String getFunction() {
+		return function;
+	}
+	public void setFunction(String function) {
+		this.function = function;
+	}
+	public int getType() {
+		return type;
+	}
+	public void setType(int type) {
+		this.type = type;
+	}
+	public String getEppend() {
+		return eppend;
+	}
+	public void setEppend(String eppend) {
+		this.eppend = eppend;
+	}
+	public Date getDate() {
+		return date;
+	}
+	public void setDate(Date date) {
+		this.date = date;
+	}
+	
+}

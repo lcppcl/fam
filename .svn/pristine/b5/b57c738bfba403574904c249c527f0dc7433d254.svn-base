@@ -1,0 +1,47 @@
+package cn.fam.servive;
+
+/*import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import cn.fam.beans.User;
+import cn.fam.daoImp.UserDaoImp;
+import cn.fam.dbutil.DbUtil;
+
+@WebServlet("/loginServlet")
+public class loginServlet extends HttpServlet {
+
+	public void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		String acount = request.getParameter("acount");
+		String password = request.getParameter("password");
+
+		if (acount != null && !acount.equals("")) {
+			UserDaoImp usi = new UserDaoImp();
+			try {
+				User user = usi.getUserByAcount(acount);
+				if (user == null || user.getPassword().equals(password)) {
+					request.setAttribute("msg1", "帐号或密码输入有误,登录失败！");
+				} else if (user.getType() == 1) {// 用户类型为1时，作为管理员身份登录，跳转至管理员首页
+					RequestDispatcher dispatcher = request
+							.getRequestDispatcher("/user.jsp");
+					dispatcher.forward(request, response); // 内部跳转，将处理信息存储在request中
+				} else {// 用户类型为其他，作为普通用户登录
+					RequestDispatcher dispatcher = request
+							.getRequestDispatcher("/index.jsp");
+					dispatcher.forward(request, response); // 内部跳转，将处理信息存储在request中
+				}
+			} catch (Exception ex) {
+				ex.printStackTrace();
+			}
+
+		}
+	}
+}*/

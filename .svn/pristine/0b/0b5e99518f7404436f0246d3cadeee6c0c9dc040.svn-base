@@ -1,0 +1,156 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="description" content="Minimal empty page" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="../assets/js/jquery-2.0.3.min.js"></script>
+		<link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../assets/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="../assets/css/ace-fonts.css" />
+		<link rel="stylesheet" href="../assets/css/ace.min.css" />
+		<link rel="stylesheet" href="../assets/css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="../assets/css/ace-skins.min.css" />
+		<script src="../assets/js/ace-extra.min.js"></script>
+		<title>Insert title here</title>
+	</head>
+
+	<body>
+			<div class="sidebar-shortcuts" id="sidebar-shortcuts" style="position: absolute;border-right:2px solid #438EB9 ;">
+				<div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
+					<button class="btn btn-success">
+						<i class="icon-signal bigger-150"></i>
+					</button>
+
+					<button class="btn btn-info">
+						<i class="icon-pencil bigger-150"></i>
+					</button>
+
+					<button class="btn btn-warning">
+						<i class="icon-group bigger-150"></i>
+					</button>
+
+					<button class="btn btn-danger">
+						<i class="icon-cogs bigger-150"></i>
+					</button>
+				</div>
+
+				<div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
+					<span class="btn btn-success"></span>
+
+					<span class="btn btn-info"></span>
+
+					<span class="btn btn-warning"></span>
+
+					<span class="btn btn-danger"></span>
+				</div>
+			</div>
+			<!-- #sidebar-shortcuts -->
+
+			<ul class="nav nav-list" style="border-right:2px solid #438EB9 ;">
+				<li class="active open">
+					<a href="#" class="dropdown-toggle">
+						<i class="icon-list"></i>
+						<span class="menu-text"> 用户管理 </span>
+
+						<b class="arrow icon-angle-down"></b>
+					</a>
+
+					<ul class="submenu">
+						<li>
+							<a href="/fam/AppInformationReultServlet" target="mainFrame">
+								<i class="icon-double-angle-right"></i> 申报管理
+							</a>
+						</li>
+
+						<li>
+							<a href="/fam/AppInformationServlet" target="mainFrame">
+								<i class="icon-double-angle-right"></i> 申报列表
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="active open">
+					<a href="#" class="dropdown-toggle">
+						<i class="icon-list"></i>
+						<span class="menu-text"> 基础管理 </span>
+
+						<b class="arrow icon-angle-down"></b>
+					</a>
+
+					<ul class="submenu">
+						<li>
+							<a href="info_re.jsp" target="mainFrame">
+								<i class="icon-double-angle-right"></i> 个人资料修改
+							</a>
+						</li>
+						<li>
+							<a href="pwd.jsp" target="mainFrame">
+								<i class="icon-double-angle-right"></i> 密码修改
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="active open">
+					<a href="#" class="dropdown-toggle">
+						<i class="icon-cloud"></i>
+						<span class="menu-text"> 申请用户管理 </span>
+
+						<b class="arrow icon-angle-down"></b>
+					</a>
+
+					<ul class="submenu">
+						<li>
+							<a href="mana_t.html">
+								<i class="icon-double-angle-right"></i> 申请用户判定
+							</a>
+						</li>
+
+						<li>
+							<a href="mana_d.html">
+								<i class="icon-double-angle-right"></i> 申请用户删除
+							</a>
+						</li>
+					</ul>
+				</li>
+				<li class="active open">
+					<a href="#" class="dropdown-toggle">
+						<i class="icon-comment"></i>
+						<span class="menu-text"> 通知管理 </span>
+
+						<b class="arrow icon-angle-down"></b>
+					</a>
+
+					<ul class="submenu">
+						<li>
+							<a href="#">
+								<i class="icon-double-angle-right"></i> 站内邮件
+							</a>
+						</li>
+
+						<li>
+							<a href="#">
+								<i class="icon-double-angle-right"></i> 系统通知
+							</a>
+						</li>
+					</ul>
+				</li>
+				<div class="sidebar-collapse" id="sidebar-collapse">
+					<i class="icon-double-angle-left" data-icon1="icon-double-angle-left" data-icon2="icon-double-angle-right"></i>
+				</div>
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='../assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+		</script>
+		<script type="text/javascript">
+			if("ontouchend" in document) document.write("<script src='../assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+		</script>
+		<script src="../assets/js/bootstrap.min.js"></script>
+		<script src="../assets/js/typeahead-bs2.min.js"></script>
+		<script src="../assets/js/jquery.dataTables.min.js"></script>
+		<script src="../assets/js/jquery.dataTables.bootstrap.js"></script>
+		<script src="../assets/js/ace-elements.min.js"></script>
+		<script src="../assets/js/ace.min.js"></script>
+	</body>
+</html>

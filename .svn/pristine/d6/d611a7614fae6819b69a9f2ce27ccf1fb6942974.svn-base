@@ -1,0 +1,54 @@
+*{
+	margin: 0;
+	font-family: "微软雅黑";
+}
+.connect{
+	position:absolute;
+	top: 190px;
+	left: 38px;
+}
+.sky{
+	position: absolute;
+	left: 480px;
+	top: 190px;
+}
+.sky-text{
+	position: relative;
+	left: 30px;
+	width: 384px;
+	height: 375px;
+	border-left: 1px solid #CCCCCC;
+	border-right: 1px solid #CCCCCC;
+	border-bottom: 1px solid #CCCCCC;
+	display: none;
+}
+#sky-hide{
+	display: none;
+}
+.wel{
+	position: absolute;
+	left: 130px;
+	top: 70px;
+	width: 768px;
+	height: 80px;
+	border-top: 1px solid #CCCCCC;
+	border-right: 1px solid #CCCCCC;
+	border-bottom: 1px solid #CCCCCC;
+	background-color: whitesmoke;
+}
+.wel span{
+	font-family: "微软雅黑";
+	font-size: 20px;
+	position: absolute;
+	left: 30px;
+	top: 22px;
+	color: #999999;
+}
+.wel-left{
+	position: absolute;
+	left: 50px;
+	top: 70px;
+	height: 80px;
+	width: 80px;
+	background-color: #009999;
+}

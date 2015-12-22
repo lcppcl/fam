@@ -1,0 +1,23 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8" import="cn.fam.beans.*"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>您的信息</title>
+</head>
+<body>
+<center>
+<h1>您的账号和密码！请勿随意泄露</h1>
+
+<%
+IndPer in =(IndPer)session.getAttribute("in");
+%>
+<center><h1>您的登录名是:<%=in.getRegisterName() %></h1></center>
+<center><h1>您的密码是：<%=in.getPassword() %></h1></center>
+
+
+<a href="login.jsp">快点去登陆</a>
+</center>
+</body>
+</html>

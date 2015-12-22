@@ -1,0 +1,79 @@
+package cn.fam.beans;
+
+/*
+ * 用户
+ */
+public class User {
+	private int id;        				//id号
+	private String password;  			//密码
+	private String name;				//姓名
+	private String sex;					//性别
+	private String number;				//省份证
+	private String tel;					//联系电话
+	private String Email;				//邮箱
+	private String belongUnion;			//所属公会
+	private int type;					//身份类型，管理员~~
+	private String acount;				//账号
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getSex() {
+		return sex;
+	}
+	public void setSex(String sex) {
+		this.sex = sex;
+	}
+	public String getNumber() {
+		return number;
+	}
+	public void setNumber(String number) {
+		this.number = number;
+	}
+	public String getTel() {
+		return tel;
+	}
+	public void setTel(String tel) {
+		this.tel = tel;
+	}
+	public String getEmail() {
+		return Email;
+	}
+	public void setEmail(String email) {
+		Email = email;
+	}
+	public String getBelongUnion() {
+		return belongUnion;
+	}
+	public void setBelongUnion(String belongUnion) {
+		this.belongUnion = belongUnion;
+	}
+	public int getType() {
+		return type;
+	}
+	public void setType(int type) {
+		this.type = type;
+	}
+	public String getAcount() {
+		return acount;
+	}
+	public void setAcount(String acount) {
+		this.acount = acount;
+	}
+	
+	
+}

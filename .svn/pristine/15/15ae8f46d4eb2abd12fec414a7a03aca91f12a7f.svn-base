@@ -1,0 +1,10 @@
+package cn.fam.beans;
+
+import java.io.Serializable;
+
+//审核人信息
+public class VerInfo implements Serializable{
+	private int id;
+	private String UserName;//用户名
+	private String Password;//密码
+}

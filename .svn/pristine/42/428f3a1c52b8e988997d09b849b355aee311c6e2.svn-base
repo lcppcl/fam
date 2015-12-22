@@ -1,0 +1,29 @@
+package cn.fam.daoImp;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import cn.fam.dao.InvPer;
+import cn.fam.dbutil.DbUtil;
+
+public class InvPerImp implements InvPer {
+
+	private static DbUtil dbUtil = new DbUtil();
+
+	@Override
+	public boolean findInvPer(String RegisterName,String Password) throws Exception {
+		Connection con = dbUtil.getCon(); // 获取连接
+		String sql = "select * from individual_person where RegisterName=? and Password=?";
+		PreparedStatement pstmt = con.prepareStatement(sql);
+		pstmt.setString(1, RegisterName);
+		pstmt.setString(2, Password);
+		ResultSet rs = pstmt.executeQuery(); // 返回结果集ResultSet
+		if(rs.next()) {
+			return true;
+		}
+		// 关闭链接
+		dbUtil.close(pstmt, con);
+		return false;
+	}
+}

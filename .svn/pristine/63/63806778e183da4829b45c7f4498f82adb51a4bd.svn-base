@@ -1,0 +1,15 @@
+$(document).ready(function() {
+	$(".use-type2 button").click(function() {
+		$(".user").hide(500, function() {
+			$(".group").show(500);
+		});
+	});
+});
+
+$(document).ready(function() {
+	$(".use-type1 button").click(function() {
+		$(".group").hide(500, function() {
+			$(".user").show(500);
+		});
+	});
+});

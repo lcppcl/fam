@@ -1,0 +1,6 @@
+package cn.fam.dao;
+
+public interface VerInfo {
+	//
+	public boolean findVer(String name,String password)throws Exception;
+}

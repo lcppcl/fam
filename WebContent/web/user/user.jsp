@@ -1,0 +1,33 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
+<%
+	String path = request.getContextPath() + "/";
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta charset="utf-8">
+<title></title>
+<style type="text/css">
+* {
+	margin: 0;
+	padding: 0;
+}
+#nav {
+	position: absolute;
+	top: 45px;
+	width: 100%;
+	height: auto;
+}
+</style>
+</head>
+<body>
+	<iframe src="../head.jsp" name="head" width="100%" height="50px"
+		scrolling="no" frameborder="0"></iframe>
+	<div id="nav">
+		<iframe src="welcome.jsp" name="nav" width="100%" height="1000px"
+			scrolling="no" frameborder="0"> </iframe>
+	</div>
+</body>
+</html>

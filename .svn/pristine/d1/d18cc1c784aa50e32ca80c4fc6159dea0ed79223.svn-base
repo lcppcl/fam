@@ -1,0 +1,64 @@
+package cn.fam.beans;
+
+/*
+ * 集体申请
+ */
+public class Collectivity {
+	private int id;					//id
+	private String credit;			//集体编号
+	private String addr;			//荣誉称号
+	private String company;			//单位名称
+	private String name;			//负责人名称
+	private String tel;				//联系方式
+	private String deed;			//主要事迹
+	private int type;				//类型
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getCredit() {
+		return credit;
+	}
+	public void setCredit(String credit) {
+		this.credit = credit;
+	}
+	public String getAddr() {
+		return addr;
+	}
+	public void setAddr(String addr) {
+		this.addr = addr;
+	}
+	public String getCompany() {
+		return company;
+	}
+	public void setCompany(String company) {
+		this.company = company;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getTel() {
+		return tel;
+	}
+	public void setTel(String tel) {
+		this.tel = tel;
+	}
+	public String getDeed() {
+		return deed;
+	}
+	public void setDeed(String deed) {
+		this.deed = deed;
+	}
+	public int getType() {
+		return type;
+	}
+	public void setType(int type) {
+		this.type = type;
+	}
+	
+}

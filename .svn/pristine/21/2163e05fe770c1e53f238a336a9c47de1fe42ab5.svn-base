@@ -1,0 +1,16 @@
+package cn.fam.dao;
+
+/*import cn.fam.beans.Perapply;
+
+public interface PerapplyDao {
+	// 添加申请荣誉信息
+	public void addPer(Perapply perapply) throws Exception;
+
+	// 查找申请荣誉信息
+	public Perapply findPer(int acount) throws Exception;
+
+	// 删除申请荣誉信息
+	public void delPer(int acount) throws Exception;
+
+}
+*/

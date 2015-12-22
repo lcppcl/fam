@@ -1,0 +1,8 @@
+package cn.fam.dao;
+
+import cn.fam.beans.IndPer;
+
+public interface IndPerDao {
+	//≤È’“”√ªß
+	public IndPer findInvPer(String RegisterName, String Password) throws Exception;
+}

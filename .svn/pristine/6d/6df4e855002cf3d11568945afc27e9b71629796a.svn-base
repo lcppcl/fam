@@ -1,0 +1,44 @@
+package cn.fam.daoImp;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import cn.fam.beans.IndPer;
+import cn.fam.dao.IndPerDao;
+import cn.fam.dbutil.DbUtil;
+
+public class IndPerDaoImp implements IndPerDao {
+
+	private static DbUtil dbUtil = new DbUtil();
+	IndPer indPer;
+
+	@Override
+	public IndPer findInvPer(String RegisterName, String Password)
+			throws Exception {
+		Connection con = dbUtil.getCon(); // 获取连接
+		String sql = "select * from individual_person where RegisterName=? and Password=?";
+		PreparedStatement pstmt = con.prepareStatement(sql);
+		pstmt.setString(1, RegisterName);
+		pstmt.setString(2, Password);
+		ResultSet rs = pstmt.executeQuery(); // 返回结果集ResultSet
+		while (rs.next()) {
+			indPer = new IndPer();
+			indPer.setRegisterName(RegisterName);
+			indPer.setPassword(Password);
+			indPer.setRealName(rs.getString("RealName"));
+			indPer.setBirthDate(rs.getDate("BirthDate"));
+			indPer.setSex(rs.getString("Sex"));
+			indPer.setNation(rs.getString("Nation"));
+			indPer.setWorkSpace(rs.getString("WorkSpace"));
+			indPer.setIdCare(rs.getString("IdCare"));
+			indPer.setEducation(rs.getString("Education"));
+			indPer.setPolitical(rs.getString("Political"));
+			indPer.setPhone(rs.getString("Phone"));
+			indPer.setType(rs.getString("type"));
+		}
+		// 关闭链接
+		dbUtil.close(pstmt, con);
+		return indPer;
+	}
+}

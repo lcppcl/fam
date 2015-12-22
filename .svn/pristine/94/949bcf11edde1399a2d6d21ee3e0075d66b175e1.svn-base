@@ -1,0 +1,39 @@
+package cn.fam.daoImp;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+import cn.fam.beans.Perapply;
+import cn.fam.dao.PerapplyDao;
+import cn.fam.dbutil.DbUtil;
+
+public class PerapplyDaoImp implements PerapplyDao{
+
+	private static DbUtil dbUtil = new DbUtil();
+	@Override
+	public void addPer(Perapply perapply) throws Exception {
+		// TODO Auto-generated method stub
+		Connection conn = dbUtil.getCon();
+		String sql = "insert into perapply value(?,?,?,?,?,?,?,?,?,?,?,?)";
+		/*PreparedStatement pstmt = con.prepareStatement(sql);
+		pstmt.setString(1, course.getCourseNo());
+		pstmt.setString(2, course.getCourseName());
+		pstmt.setString(3, course.getCredit());
+		pstmt.setString(4, course.getTeaNo());
+		pstmt.executeUpdate();
+		dbUtil.close(pstmt, con);*/
+	}
+
+	@Override
+	public Perapply findPer(int acount) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void delPer(int acount) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

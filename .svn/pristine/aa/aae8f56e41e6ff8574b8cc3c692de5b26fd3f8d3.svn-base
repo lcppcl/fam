@@ -1,0 +1,159 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta charset="utf-8" />
+<title>用户中心</title>
+<meta name="description" content="Minimal empty page" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script src="assets/js/jquery-2.0.3.min.js"></script>
+<link rel="stylesheet" type="text/css" href="assets/css/nav.css" />
+<script type="text/javascript" src="assets/js/nav.js"></script>
+<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+<link rel="stylesheet" href="assets/css/ace-fonts.css" />
+<link rel="stylesheet" href="assets/css/ace.min.css" />
+<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+<script>
+	$(function start() {
+		$("#list").slideDown(500);
+	});
+</script>
+</head>
+
+<body window.onload="start()">
+	<div class="top"></div>
+	<div class="bottom"></div>
+	<div id="list">
+		<form class="form-horizontal" role="form">
+			<h4 class="header white lighter"
+				style="position: absolute; top: -50px; left: -50px;">
+				<i class="icon-pencil"></i> <span style="font-size: 20px;">请输入您的账号资料</span>
+			</h4>
+			<br> <br>
+			<div class="form-group">
+				<div class="col-sm-9">
+					<input type="text" placeholder="请输入8位以上登陆账户" id="acount" size="32"
+						onChange='check("acount")' name="RegisterName"/> <i class="icon-user orange "
+						style="position: relative; left: -25px;"></i> <span
+						id="acountCheck" class="check" hidden="true">用户名不得低于8位</span>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-9">
+					<input type="password" placeholder="请输入8位以上密码" id="password"
+						size="32" onChange='check("password")' name="password1"/> <i
+						class="icon-lock orange " style="position: relative; left: -25px;"></i>
+					<span id="passwordCheck" class="check" hidden="true">密码不得低于8位</span>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-9">
+					<input type="password" placeholder="请再次输入密码" id="cpassword"
+						size="32" onChange='check("cpassword")' name="password2"/> <i
+						class="icon-repeat orange "
+						style="position: relative; left: -25px;"></i> <span
+						id="cpasswordCheck" class="check" hidden="true">两次输入密码不同</span>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-9">
+					<input type="text" placeholder="请输入真实姓名" id="name" size="32"
+						onChange='check("name")' name="RealName"/> <i class="icon-comment orange "
+						style="position: relative; left: -25px;"></i> <span id="nameCheck"
+						class="check" hidden="true">姓名不能为空</span>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-9">
+					<input type="text" placeholder="请输入您的生日" id="id" size="32"
+						onChange='check("id")' name="BirthDate"/> <i class="icon-credit-card orange "
+						style="position: relative; left: -25px;"></i> <span id="idCheck"
+						class="check" hidden="true">生日不能为空</span>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-9">
+					<input type="text" placeholder="请输入您的性别" id="id" size="32"
+						onChange='check("id")' name="Sex"/> <i class="icon-leaf orange "
+						style="position: relative; left: -25px;"></i> <span id="idCheck"
+						class="check" hidden="true">性别不能为空</span>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-9">
+					<input type="text" placeholder="请输入您的民族" id="id" size="32"
+						onChange='check("id")' name="Nation"/> <i class="icon-group orange "
+						style="position: relative; left: -25px;"></i> <span id="idCheck"
+						class="check" hidden="true">民族不能为空</span>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-9">
+					<input type="text" placeholder="请输入工作地点" id="id" size="32"
+						onChange='check("id")' name="WorkSpace"/> <i class="icon-home orange "
+						style="position: relative; left: -25px;"></i> <span id="idCheck"
+						class="check" hidden="true">工作地点不能为空</span>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-9">
+					<input type="text" placeholder="身份证号" id="id" size="32"
+						onChange='check("id")' name="IdCard"/> <i class="icon-credit-card orange "
+						style="position: relative; left: -25px;"></i> <span id="idCheck"
+						class="check" hidden="true">身份证号不能为空</span>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-9">
+					<input type="text" placeholder="教育程度" id="id" size="32"
+						onChange='check("id")' name="Education"/> <i class="icon-book orange "
+						style="position: relative; left: -25px;"></i> <span id="idCheck"
+						class="check" hidden="true">教育程度不能为空</span>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-9">
+					<input type="text" placeholder="政治面貌" id="id" size="32"
+						onChange='check("id")' name="Political"/> <i class="icon-list-alt orange "
+						style="position: relative; left: -25px;"></i> <span id="idCheck"
+						class="check" hidden="true">政治面貌不能为空</span>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-9">
+					<input type="text" placeholder="请输入手机号码" id="tel" size="32"
+						onChange='check("tel")' name="Phone"/> <i class="icon-phone orange "
+						style="position: relative; left: -25px;"></i> <span id="telCheck"
+						class="check" hidden="true">号码位数错误</span>
+				</div>
+			</div>
+		</form>
+		<button type="button"
+			class="width-35 pull-right btn btn-sm btn-primary"
+			style="position: relative; top: 80px; left: -140px;">
+			<i class="icon-key"></i> <span>注册</span>
+		</button>
+	</div>
+</body>
+<script src="assets/js/ace-extra.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/typeahead-bs2.min.js"></script>
+<script src="assets/js/ace-elements.min.js"></script>
+<script src="assets/js/ace.min.js"></script>
+<script type="text/javascript">
+	window.jQuery
+			|| document.write("<script src='assets/js/jquery-2.0.3.min.js'>"
+					+ "<" + "/script>");
+</script>
+<script type="text/javascript">
+	if ("ontouchend" in document)
+		document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"
+				+ "<" + "/script>");
+</script>
+
+</html>

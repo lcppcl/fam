@@ -1,0 +1,43 @@
+package cn.fam.servive;
+
+
+/**
+ * Servlet implementation class AddPerapplyServlet
+ */
+/*@WebServlet("/AddPerapplyServlet")
+public class AddPerapplyServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	protected void doGet(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
+
+		String lyc = request.getParameter("lyc"); // 劳模称号
+		String credit = request.getParameter("credit"); // 荣誉称号
+		String treatment = request.getParameter("treatment"); // 享受待遇
+		String addr = request.getParameter("addr"); // 所属市
+		String culture = request.getParameter("culture"); // 文化程度
+		String politic = request.getParameter("politic"); // 政治面貌
+		String company = request.getParameter("company"); // 工作单位
+		String function = request.getParameter("function"); // 工作职务
+		int type = 0; // 认定状态 0未认定
+		String eppend = request.getParameter("eppend"); // 附加信息
+		Date date = new Date(); // 认定时间
+
+		if (lyc != null && !lyc.equals("") && credit != null
+				&& !credit.equals("") && treatment != null
+				&& !treatment.equals("") && addr != null && !addr.equals("")
+				&& culture != null && !culture.equals("") && politic != null
+				&& !politic.equals("") && company != null
+				&& !company.equals("") && function != null
+				&& !function.equals("") && eppend != null && !eppend.equals("")) {
+			Perapply perapply = new Perapply();
+
+		}
+	}
+
+	protected void doPost(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
+		this.doGet(request, response);
+	}
+
+}*/

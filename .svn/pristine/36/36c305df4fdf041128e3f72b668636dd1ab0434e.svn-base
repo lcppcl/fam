@@ -1,0 +1,61 @@
+package cn.fam.servive;
+
+import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/RegisterServlet")
+public class RegisterServlet extends HttpServlet {
+	public String[] nameList;
+	private static final long serialVersionUID = 1L;
+
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		String acount = (String) req.getParameter("acount");
+		String password = (String) req.getParameter("password");
+		String password2 = (String) req.getParameter("password2");
+		String name = (String) req.getParameter("name");
+		String sex = (String) req.getParameter("sex");
+		String number = (String) req.getParameter("number");
+		String tel = (String) req.getParameter("tel");
+		String Email = (String) req.getParameter("Email");
+		String belongUnion = (String) req.getParameter("belongUnion");
+		if (acount.equals("") || acount == null) {
+			req.setAttribute("errorMessage1", "用户名不能为 空！！");
+		} else if (acount.length() < 8) {
+			req.setAttribute("errorMessage3", "账号不能少于八位数！！");
+		} else if (password.equals("") || password == null) {
+			req.setAttribute("errorMessage4", "密码不能为空！！");
+		} else if (password.length() < 8) {
+			req.setAttribute("errorMessage5", "密码不能少于八位数！！");
+		} else if (!password.equals(password2)) {
+			req.setAttribute("errorMessage6", "两次输入密码不 一致！！");
+		} else if (name.equals("") || name == null) {
+			req.setAttribute("errorMessage7", "姓名不能为空！！");
+		} else if (number.equals("") || number == null) {
+			req.setAttribute("errorMessage8", "身份证不能为空！！");
+		} else if (tel.equals("") || tel == null) {
+			req.setAttribute("errorMessage9", "手机号码不能为空！！");
+		} else if (Email.equals("") || Email == null) {
+			req.setAttribute("errorMessage10", "Email不能为空！！");
+		} else if (belongUnion.equals("") || belongUnion == null) {
+			req.setAttribute("errorMessage11", "所属公会不能为空！！");
+		} else {
+			RequestDispatcher reqDispatcher = req
+					.getRequestDispatcher("/login.jsp");
+			reqDispatcher.forward(req, resp);
+		}
+	}
+
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+			throws ServletException, IOException {
+		doGet(req, resp);
+	}
+
+}

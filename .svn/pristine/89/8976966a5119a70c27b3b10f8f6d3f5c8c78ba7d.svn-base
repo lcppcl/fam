@@ -1,0 +1,53 @@
+package cn.fam.daoImp;
+
+/*import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import cn.fam.beans.User;
+import cn.fam.dbutil.DbUtil;
+
+public class UserDaoImp {
+	private static DbUtil dbUtil = new DbUtil();
+
+	public User getUserByAcount(String acount) throws Exception {
+		User user = null;// attention！
+		Connection conn = dbUtil.getCon();
+		String sql = "select * from user where acount=?";
+		PreparedStatement pstmt = conn.prepareStatement(sql);
+		pstmt.setString(1, acount);
+		ResultSet rs = pstmt.executeQuery();
+		while (rs.next()) {
+			user = new User();
+			user.setAcount(acount);
+			user.setId(rs.getInt("id"));
+			user.setPassword(rs.getString("password"));
+			user.setBelongUnion(rs.getString("belongUnion"));
+			user.setSex(rs.getString("sex"));
+			user.setNumber(rs.getString("number"));
+			user.setTel(rs.getString("tel"));
+			user.setEmail(rs.getString("Email"));
+			user.setType(rs.getInt("type"));
+		}
+
+		return user;
+	}
+
+	public void insertUser(User user) throws Exception {
+		Connection con = dbUtil.getCon(); // 获取连接
+		String sql = "insert into user value(?,?,?,?,?,?,?,?)";
+		PreparedStatement pstmt = con.prepareStatement(sql);
+		pstmt.setString(1, user.getAcount());
+		pstmt.setString(2, user.getPassword());
+		pstmt.setString(3, user.getName());
+		pstmt.setString(4, user.getSex());
+		pstmt.setString(5, user.getNumber());
+		pstmt.setString(6, user.getTel());
+		pstmt.setString(7, user.getEmail());
+		pstmt.setString(8, user.getBelongUnion());
+		pstmt.execute();
+		// 关闭链接
+		dbUtil.close(pstmt, con);
+	}
+
+}*/

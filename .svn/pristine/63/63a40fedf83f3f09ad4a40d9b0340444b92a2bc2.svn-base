@@ -1,0 +1,45 @@
+package cn.fam.servive;
+
+import java.io.IOException;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import cn.fam.beans.AppInfo;
+import cn.fam.beans.IndPer;
+import cn.fam.daoImp.FindAppInfoDaoImp;
+
+/**
+ * Servlet implementation class FindAppInfoServlet
+ */
+@WebServlet("/FindAppInfoServlet")
+public class FindAppInfoServlet extends HttpServlet {
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		IndPer indPer = (IndPer) request.getSession().getAttribute("indPer");
+		String realname = indPer.getRealName();
+		FindAppInfoDaoImp faid = new FindAppInfoDaoImp();
+		try {
+			List<AppInfo> appinfo = faid.findAppInfo(realname);
+			if(appinfo.size() != 0){
+				request.setAttribute("appinfo",appinfo);
+				request.getRequestDispatcher("web/user/find.jsp").forward(request, response);//ÄÚ²¿Ìø×ª
+			}
+			
+			
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		this.doGet(request, response);
+	}
+
+}

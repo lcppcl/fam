@@ -1,0 +1,31 @@
+package cn.fam.servive;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import cn.fam.daoImp.AppInfoDaoImp;
+
+/**
+ * Servlet implementation class PassUerAppInfroServert
+ */
+@WebServlet("/PassUerAppInfroServert")
+public class PassUerAppInfroServert extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doPost(request,response);
+	}
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		int no = (int) request.getAttribute("pass");
+		AppInfoDaoImp appImp = new AppInfoDaoImp();
+		String pass = appImp.SetPass(no);
+		request.getSession().setAttribute("pass", pass);
+		response.sendRedirect("web/manager/manager.jsp");
+	}
+
+}

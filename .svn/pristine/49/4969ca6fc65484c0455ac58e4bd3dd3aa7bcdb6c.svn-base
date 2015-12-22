@@ -1,0 +1,52 @@
+package cn.fam.servive;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import cn.fam.daoImp.InvPerImp;
+import cn.fam.daoImp.VerInfoImp;
+import cn.fam.dbutil.DbUtil;
+
+@WebServlet("/loginServlet")
+public class loginServlet extends HttpServlet {
+
+	public void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		String RegisterName = request.getParameter("name").trim();
+		String Password = request.getParameter("Password").trim();
+		if (RegisterName != null && !RegisterName.equals("")
+				&& Password != null && !Password.equals("")) {
+			InvPerImp inv = new InvPerImp();
+			try {
+				boolean user = inv.findInvPer(RegisterName, Password);
+				if (user) {
+					response.sendRedirect("web/user/user.jsp");
+
+				} else {
+					VerInfoImp vii = new VerInfoImp();
+					boolean use = vii.findVer(RegisterName, Password);
+					if (use) {
+						response.sendRedirect("web/manager/user.jsp");
+
+					} else {
+						
+						response.sendRedirect("web/login.jsp");
+					}
+				}
+			} catch (Exception ex) {
+				ex.printStackTrace();
+			}
+		} else {
+		
+			response.sendRedirect("web/login.jsp");
+		}
+	}
+}
